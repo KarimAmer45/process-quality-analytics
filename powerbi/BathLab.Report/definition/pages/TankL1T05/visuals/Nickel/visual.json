@@ -1,0 +1,162 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "name": "Nickel",
+  "position": {
+    "x": 20,
+    "y": 20,
+    "z": 0,
+    "height": 350,
+    "width": 900,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Nickel"
+                    }
+                  },
+                  "Property": "sampled_local"
+                }
+              },
+              "queryRef": "Nickel.sampled_local",
+              "nativeQueryRef": "sampled_local"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Nickel"
+                        }
+                      },
+                      "Property": "value"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(Nickel.value)",
+              "nativeQueryRef": "value"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Nickel"
+                        }
+                      },
+                      "Property": "cl"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(Nickel.cl)",
+              "nativeQueryRef": "cl"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Nickel"
+                        }
+                      },
+                      "Property": "ucl"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(Nickel.ucl)",
+              "nativeQueryRef": "ucl"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Nickel"
+                        }
+                      },
+                      "Property": "lcl"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(Nickel.lcl)",
+              "nativeQueryRef": "lcl"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Nickel"
+                        }
+                      },
+                      "Property": "signal_value"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(Nickel.signal_value)",
+              "nativeQueryRef": "signal_value"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "lineStyles": [
+        {
+          "properties": {
+            "showMarker": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Avg(Nickel.signal_value)"
+          }
+        }
+      ]
+    }
+  }
+}

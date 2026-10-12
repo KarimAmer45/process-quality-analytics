@@ -1,0 +1,14 @@
+{
+  "runs": 1567,
+  "failures": 104,
+  "group_runs": 955,
+  "other_runs": 612,
+  "failures_in_group": 81,
+  "observed_max_abs_effect": 0.488,
+  "null_shifts": 300,
+  "null_seed": 0,
+  "null_median_max_abs_effect": 0.472,
+  "null_p95_max_abs_effect": 0.603,
+  "share_of_shifts_at_or_above_observed": 0.397,
+  "method": "failure labels rotated by a random offset (50..n-50 runs, without replacement); group and effects recomputed per rotation"
+}

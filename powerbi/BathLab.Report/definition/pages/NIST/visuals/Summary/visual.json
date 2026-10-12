@@ -1,0 +1,108 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "name": "Summary",
+  "position": {
+    "x": 20,
+    "y": 20,
+    "z": 0,
+    "height": 250,
+    "width": 1380,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NISTSummary"
+                    }
+                  },
+                  "Property": "n"
+                }
+              },
+              "queryRef": "NISTSummary.n",
+              "nativeQueryRef": "n"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NISTSummary"
+                    }
+                  },
+                  "Property": "mean"
+                }
+              },
+              "queryRef": "NISTSummary.mean",
+              "nativeQueryRef": "mean"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NISTSummary"
+                    }
+                  },
+                  "Property": "sd"
+                }
+              },
+              "queryRef": "NISTSummary.sd",
+              "nativeQueryRef": "sd"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NISTSummary"
+                    }
+                  },
+                  "Property": "median"
+                }
+              },
+              "queryRef": "NISTSummary.median",
+              "nativeQueryRef": "median"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NISTSummary"
+                    }
+                  },
+                  "Property": "minimum"
+                }
+              },
+              "queryRef": "NISTSummary.minimum",
+              "nativeQueryRef": "minimum"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NISTSummary"
+                    }
+                  },
+                  "Property": "maximum"
+                }
+              },
+              "queryRef": "NISTSummary.maximum",
+              "nativeQueryRef": "maximum"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

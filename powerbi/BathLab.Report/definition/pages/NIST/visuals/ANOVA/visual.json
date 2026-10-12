@@ -1,0 +1,94 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "name": "ANOVA",
+  "position": {
+    "x": 20,
+    "y": 300,
+    "z": 0,
+    "height": 400,
+    "width": 1380,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NISTAnova"
+                    }
+                  },
+                  "Property": "component"
+                }
+              },
+              "queryRef": "NISTAnova.component",
+              "nativeQueryRef": "component"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NISTAnova"
+                    }
+                  },
+                  "Property": "df"
+                }
+              },
+              "queryRef": "NISTAnova.df",
+              "nativeQueryRef": "df"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NISTAnova"
+                    }
+                  },
+                  "Property": "ss"
+                }
+              },
+              "queryRef": "NISTAnova.ss",
+              "nativeQueryRef": "ss"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NISTAnova"
+                    }
+                  },
+                  "Property": "ms"
+                }
+              },
+              "queryRef": "NISTAnova.ms",
+              "nativeQueryRef": "ms"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "NISTAnova"
+                    }
+                  },
+                  "Property": "variance_component"
+                }
+              },
+              "queryRef": "NISTAnova.variance_component",
+              "nativeQueryRef": "variance_component"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

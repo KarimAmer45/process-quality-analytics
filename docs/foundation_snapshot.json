@@ -1,0 +1,12 @@
+{
+  "db/migrations/V001__foundation.sql": "9b282163734f7a83e5b7dea8a9fdf96346153bbc8b2705df3fced8273339b683",
+  "db/migrations/V002__audit.sql": "2069e6e090083092ba20b56c4f63062fd6d8fcbb9ac0b4b9ec75272c5a44d442",
+  "db/migrations/V003__reference.sql": "c6443501084e9f19f160edc073ed2f1f30615d1fb1ac66faab9c839fd3b8e06e",
+  "db/migrations/V004__lab_core.sql": "bc095cccb74631855c8fff2275cbf880e2b43a6c927c8a6887b917951f51ad12",
+  "db/migrations/V005__traceability.sql": "ee6be396424a2390c0ad964a126aff2ecfb70c3257bdf5f6cc2d746ce71133dc",
+  "db/migrations/V006__trace_functions.sql": "6a60646f8a12a96f29305ac211516e068d69ab123486ffe4852b220edca816bf",
+  "db/migrations/V007__lab_spc.sql": "b561ff7909b2dbb49bbc534812a5f2bc38b51093cb1a0e079c9481f825bc7a91",
+  "ingest/common.py": "6dc9e8ac2f7d76ff48d674806855f02efcc42d8c0eda29ad0a0506ab5fecf38b",
+  "ingest/p1_simulate_plant.py": "f5408b972b668557e39377f03498da52f417c81d9832c04921d21dfb183f121d",
+  "config/sources.yaml": "d8e2f8898330ec1ec119e21d7eafb8d80f7acd1106eb36a8bbedcbb8b58f6abb"
+}

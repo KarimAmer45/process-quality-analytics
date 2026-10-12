@@ -1,0 +1,36 @@
+name: Verify bath lab
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: bath_admin
+          POSTGRES_PASSWORD: ci-local-only
+          POSTGRES_DB: bath_lab_spc
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U bath_admin -d bath_lab_spc"
+          --health-interval 3s --health-retries 20
+    env:
+      PGHOST: 127.0.0.1
+      PGPORT: 5432
+      PGUSER: bath_admin
+      PGPASSWORD: ci-local-only
+      PGDATABASE: bath_lab_spc
+      PGCONNECT_TIMEOUT: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install -r requirements.txt
+      - run: python scripts/demo.py
+      - run: python scripts/fetch_powerbi_schemas.py
+      - run: python scripts/validate_powerbi.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bath-lab-evidence
+          path: docs/results

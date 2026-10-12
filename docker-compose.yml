@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-bath_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-bath_lab_spc}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-55434}:5432"
+    volumes:
+      - bathdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 3s
+      retries: 20
+  demo:
+    build: .
+    depends_on:
+      db: {condition: service_healthy}
+    environment:
+      PGHOST: db
+      PGPORT: 5432
+      PGUSER: ${POSTGRES_USER:-bath_admin}
+      PGPASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      PGDATABASE: ${POSTGRES_DB:-bath_lab_spc}
+      PGCONNECT_TIMEOUT: 10
+    volumes:
+      - ./docs/results:/app/docs/results
+      - ./data:/app/data
+      - ./powerbi:/app/powerbi
+volumes:
+  bathdata:

@@ -1,0 +1,14 @@
+file_name,import_hash,sheet_name,status,reason,rows
+Laborjournal_ZnNi_L1.xlsx,1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80,Analysen,duplicate,exact duplicate of row 5,1
+Laborjournal_ZnNi_L1.xlsx,1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80,Analysen,ignored,blank row,1
+Laborjournal_ZnNi_L1.xlsx,1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80,Analysen,ignored,title or header row,4
+Laborjournal_ZnNi_L1.xlsx,1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80,Analysen,ignored,weekly summary; not a measurement,25
+Laborjournal_ZnNi_L1.xlsx,1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80,Analysen,loaded,not measured: COD,7
+Laborjournal_ZnNi_L1.xlsx,1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80,Analysen,loaded,not measured: NA2CO3,5
+Laborjournal_ZnNi_L1.xlsx,1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80,Analysen,loaded,"not measured: NA2CO3, COD",1
+Laborjournal_ZnNi_L1.xlsx,1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80,Analysen,loaded,time missing; matched the only database sample of that date (06:00),3
+Laborjournal_ZnNi_L1.xlsx,1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80,Analysen,loaded,time missing; matched the only database sample of that date (06:00); not measured: NA2CO3,1
+Laborjournal_ZnNi_L1.xlsx,1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80,Analysen,loaded,,113
+Laborjournal_ZnNi_L1.xlsx,1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80,Analysen,quarantined,"not a number: '1,3.5'",1
+Laborjournal_ZnNi_L1.xlsx,1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80,Dosierung,ignored,title or header row,4
+Laborjournal_ZnNi_L1.xlsx,1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80,Dosierung,loaded,,260

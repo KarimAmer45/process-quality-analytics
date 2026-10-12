@@ -1,0 +1,38 @@
+{
+  "database": "bath_verify_99a3f56da399",
+  "runs": [
+    {
+      "run": 1,
+      "returncode": 0,
+      "log": "clean_run_1.log"
+    },
+    {
+      "run": 2,
+      "returncode": 0,
+      "log": "clean_run_2.log"
+    }
+  ],
+  "temporary_database_removed": true,
+  "business_counts": [
+    {
+      "trace.lot": 5687,
+      "lab.analysis": 130,
+      "lab.analysis_result": 650,
+      "lab.dosing": 260,
+      "realdata.nist_litho": 450,
+      "realdata.secom_run": 1567,
+      "realdata.secom_value": 882579
+    },
+    {
+      "trace.lot": 5687,
+      "lab.analysis": 130,
+      "lab.analysis_result": 650,
+      "lab.dosing": 260,
+      "realdata.nist_litho": 450,
+      "realdata.secom_run": 1567,
+      "realdata.secom_value": 882579
+    }
+  ],
+  "stable_on_repeat": true,
+  "elapsed_seconds": 62.61
+}

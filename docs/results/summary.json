@@ -1,0 +1,189 @@
+{
+  "nist": {
+    "n": 450,
+    "mean": 2.532284344444445,
+    "sd": 0.6937559038725327,
+    "median": 2.4533370000000003,
+    "minimum": 0.746546,
+    "maximum": 5.168668
+  },
+  "secom": {
+    "runs": 1567,
+    "failures": 104
+  },
+  "secom_nonmissing": 882579,
+  "rule4_runs": [
+    {
+      "tank_code": "L1-T05",
+      "parameter_code": "NI",
+      "side": "-1",
+      "grp": 25,
+      "run_start": "2026-05-15 06:00:00+02:00",
+      "run_end": "2026-05-28 06:00:00+02:00",
+      "observations": 10,
+      "first_signal": "2026-05-26 06:00:00+02:00",
+      "signal_count": 3
+    },
+    {
+      "tank_code": "L1-T05",
+      "parameter_code": "ZN",
+      "side": "1",
+      "grp": 56,
+      "run_start": "2026-08-06 06:00:00+02:00",
+      "run_end": "2026-08-17 06:00:00+02:00",
+      "observations": 8,
+      "first_signal": "2026-08-17 06:00:00+02:00",
+      "signal_count": 1
+    }
+  ],
+  "nickel_beyond_limits": [
+    {
+      "tank_code": "L1-T05",
+      "sampled_local": "2026-04-30 06:00:00",
+      "value": "0.9260",
+      "mr": "0.5150",
+      "cl": "1.4221250000000000",
+      "ucl": "1.7080320967741935483768",
+      "lcl": "1.1362179032258064516232",
+      "mr_ucl": "0.35114980645161290321316",
+      "beyond_limits": true,
+      "rule4_signal": false,
+      "spc_status": "OK",
+      "signal_value": "0.9260"
+    },
+    {
+      "tank_code": "L1-T05",
+      "sampled_local": "2026-05-01 06:00:00",
+      "value": "0.8400",
+      "mr": "0.0860",
+      "cl": "1.4221250000000000",
+      "ucl": "1.7080320967741935483768",
+      "lcl": "1.1362179032258064516232",
+      "mr_ucl": "0.35114980645161290321316",
+      "beyond_limits": true,
+      "rule4_signal": false,
+      "spc_status": "OK",
+      "signal_value": "0.8400"
+    }
+  ],
+  "latest_etl": [
+    {
+      "file_name": "Laborjournal_ZnNi_L1.xlsx",
+      "import_hash": "1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80",
+      "sheet_name": "Analysen",
+      "status": "duplicate",
+      "reason": "exact duplicate of row 5",
+      "rows": 1
+    },
+    {
+      "file_name": "Laborjournal_ZnNi_L1.xlsx",
+      "import_hash": "1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80",
+      "sheet_name": "Analysen",
+      "status": "ignored",
+      "reason": "blank row",
+      "rows": 1
+    },
+    {
+      "file_name": "Laborjournal_ZnNi_L1.xlsx",
+      "import_hash": "1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80",
+      "sheet_name": "Analysen",
+      "status": "ignored",
+      "reason": "title or header row",
+      "rows": 4
+    },
+    {
+      "file_name": "Laborjournal_ZnNi_L1.xlsx",
+      "import_hash": "1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80",
+      "sheet_name": "Analysen",
+      "status": "ignored",
+      "reason": "weekly summary; not a measurement",
+      "rows": 25
+    },
+    {
+      "file_name": "Laborjournal_ZnNi_L1.xlsx",
+      "import_hash": "1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80",
+      "sheet_name": "Analysen",
+      "status": "loaded",
+      "reason": "not measured: COD",
+      "rows": 7
+    },
+    {
+      "file_name": "Laborjournal_ZnNi_L1.xlsx",
+      "import_hash": "1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80",
+      "sheet_name": "Analysen",
+      "status": "loaded",
+      "reason": "not measured: NA2CO3",
+      "rows": 5
+    },
+    {
+      "file_name": "Laborjournal_ZnNi_L1.xlsx",
+      "import_hash": "1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80",
+      "sheet_name": "Analysen",
+      "status": "loaded",
+      "reason": "not measured: NA2CO3, COD",
+      "rows": 1
+    },
+    {
+      "file_name": "Laborjournal_ZnNi_L1.xlsx",
+      "import_hash": "1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80",
+      "sheet_name": "Analysen",
+      "status": "loaded",
+      "reason": "time missing; matched the only database sample of that date (06:00)",
+      "rows": 3
+    },
+    {
+      "file_name": "Laborjournal_ZnNi_L1.xlsx",
+      "import_hash": "1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80",
+      "sheet_name": "Analysen",
+      "status": "loaded",
+      "reason": "time missing; matched the only database sample of that date (06:00); not measured: NA2CO3",
+      "rows": 1
+    },
+    {
+      "file_name": "Laborjournal_ZnNi_L1.xlsx",
+      "import_hash": "1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80",
+      "sheet_name": "Analysen",
+      "status": "loaded",
+      "reason": null,
+      "rows": 113
+    },
+    {
+      "file_name": "Laborjournal_ZnNi_L1.xlsx",
+      "import_hash": "1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80",
+      "sheet_name": "Analysen",
+      "status": "quarantined",
+      "reason": "not a number: '1,3.5'",
+      "rows": 1
+    },
+    {
+      "file_name": "Laborjournal_ZnNi_L1.xlsx",
+      "import_hash": "1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80",
+      "sheet_name": "Dosierung",
+      "status": "ignored",
+      "reason": "title or header row",
+      "rows": 4
+    },
+    {
+      "file_name": "Laborjournal_ZnNi_L1.xlsx",
+      "import_hash": "1e7891ac80a4dfe9ebee463995773b1bea238fad78824000423bded48c5dbb80",
+      "sheet_name": "Dosierung",
+      "status": "loaded",
+      "reason": null,
+      "rows": 260
+    }
+  ],
+  "secom_null": {
+    "runs": 1567,
+    "failures": 104,
+    "group_runs": 955,
+    "other_runs": 612,
+    "failures_in_group": 81,
+    "observed_max_abs_effect": 0.488,
+    "null_shifts": 300,
+    "null_seed": 0,
+    "null_median_max_abs_effect": 0.472,
+    "null_p95_max_abs_effect": 0.603,
+    "share_of_shifts_at_or_above_observed": 0.397,
+    "method": "failure labels rotated by a random offset (50..n-50 runs, without replacement); group and effects recomputed per rotation"
+  }
+}

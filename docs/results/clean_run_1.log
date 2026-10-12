@@ -1,0 +1,161 @@
+Applied V001__foundation.sql
+Applied V002__audit.sql
+Applied V003__reference.sql
+Applied V004__lab_core.sql
+Applied V005__traceability.sql
+Applied V006__trace_functions.sql
+Applied V007__lab_spc.sql
+Applied V008__analytics_and_import_history.sql
+Applied V009__reporting.sql
+Applied V010__evidence_hardening.sql
+Applied V011__import_ledger_and_daily_dose_identity.sql
+Applied V012__spc_baseline_status_and_capability.sql
+Applied V013__berlin_day_split.sql
+Applied R__grants.sql
+plate slots (derived): 37, lots: 5687, carriers: 11662, measurements: 27733, incident: 2026-04-30 to 2026-05-02, complaint lot: L260430-01721
+docs/results/download_manifest.json
+{
+  "nist_rows": 450,
+  "secom_runs": 1567,
+  "secom_sensors": 590,
+  "secom_failures": 104,
+  "secom_values": 882579,
+  "missing_values": 41951,
+  "missing_pct": 4.537548808583821,
+  "first_test_time": "2008-07-19 11:55:00",
+  "last_test_time": "2008-10-17 06:07:00",
+  "metadata_note": "UCI page says 591 features; the downloaded measurement matrix has 590 sensor columns. Timestamp and outcome remain separate."
+}
+data/interim/journal.json
+Inspect result written to file: F:\Repositories\Data Base\Partec\process-quality-analytics\data\raw\lab\Laborjournal_ZnNi_L1.xlsx.inspect.ndjson
+{"kind":"sheet","id":"ws/wavvu7","name":"Analysen","index":0,"range":"A1:I162","address":"A1:I162"}
+{"kind":"sheet","id":"ws/n3cs4t","name":"Dosierung","index":1,"range":"A1:G264","address":"A1:G264"}
+F:\Repositories\Data Base\Partec\process-quality-analytics\data\raw\lab\Laborjournal_ZnNi_L1.xlsx
+{
+  "file": "Laborjournal_ZnNi_L1.xlsx",
+  "sha256": "ff5c9ce24cda341d065fb4893b2c81c623868ba073bd5ce75ae102e33430494e",
+  "applied": false,
+  "reused": false,
+  "rows": 426,
+  "statuses": {
+    "ignored": 34,
+    "loaded": 390,
+    "duplicate": 1,
+    "quarantined": 1
+  },
+  "sheets": {
+    "Analysen": {
+      "ignored": 30,
+      "loaded": 130,
+      "duplicate": 1,
+      "quarantined": 1
+    },
+    "Dosierung": {
+      "ignored": 4,
+      "loaded": 260
+    }
+  },
+  "reconciliation_before": {
+    "matched_values": 635,
+    "source_only_values": 0,
+    "database_only_not_measured": 15,
+    "conflicting_rows": 0,
+    "rekeyed_rows": 0,
+    "time_missing_matched": 4,
+    "retimed_daily_totals": 0,
+    "database_only_analyses": 0,
+    "database_only_doses": 0
+  },
+  "inserted": {
+    "analyses": 0,
+    "results": 0,
+    "doses": 0
+  },
+  "inserted_this_run": 0,
+  "unexplained_rows": 0,
+  "review_required": {
+    "quarantined_rows": 1,
+    "database_only_rows": 0,
+    "retimed_daily_totals": 0
+  },
+  "coverage": {
+    "Analysen|L1-T05": [
+      "2026-03-02",
+      "2026-08-28"
+    ],
+    "Dosierung|L1-T05": [
+      "2026-03-02",
+      "2026-08-28"
+    ]
+  }
+}
+{
+  "file": "Laborjournal_ZnNi_L1.xlsx",
+  "sha256": "ff5c9ce24cda341d065fb4893b2c81c623868ba073bd5ce75ae102e33430494e",
+  "applied": true,
+  "reused": false,
+  "rows": 426,
+  "statuses": {
+    "ignored": 34,
+    "loaded": 390,
+    "duplicate": 1,
+    "quarantined": 1
+  },
+  "sheets": {
+    "Analysen": {
+      "ignored": 30,
+      "loaded": 130,
+      "duplicate": 1,
+      "quarantined": 1
+    },
+    "Dosierung": {
+      "ignored": 4,
+      "loaded": 260
+    }
+  },
+  "reconciliation_before": {
+    "matched_values": 635,
+    "source_only_values": 0,
+    "database_only_not_measured": 15,
+    "conflicting_rows": 0,
+    "rekeyed_rows": 0,
+    "time_missing_matched": 4,
+    "retimed_daily_totals": 0,
+    "database_only_analyses": 0,
+    "database_only_doses": 0
+  },
+  "inserted": {
+    "analyses": 0,
+    "results": 0,
+    "doses": 260
+  },
+  "inserted_this_run": 260,
+  "unexplained_rows": 0,
+  "review_required": {
+    "quarantined_rows": 1,
+    "database_only_rows": 0,
+    "retimed_daily_totals": 0
+  },
+  "coverage": {
+    "Analysen|L1-T05": [
+      "2026-03-02",
+      "2026-08-28"
+    ],
+    "Dosierung|L1-T05": [
+      "2026-03-02",
+      "2026-08-28"
+    ]
+  },
+  "reconciliation_after": {
+    "source_only_values": 0,
+    "different_values": 0
+  }
+}
+15 published NIST values reproduced within printed precision
+Exported 9 SQL result tables, the SECOM chance reference and 3 figures to docs/results
+Power BI: 3 pages, 8 visuals, 7 PostgreSQL views; no embedded credentials.
+.........................................................                [100%]
+57 passed in 3.62s
+
+(node:31556) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node.EXE --trace-warnings ...` to show where the warning was created)

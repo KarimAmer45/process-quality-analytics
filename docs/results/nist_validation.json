@@ -1,0 +1,92 @@
+[
+  {
+    "metric": "n",
+    "actual": 450,
+    "published": 450,
+    "passed": true
+  },
+  {
+    "metric": "mean",
+    "actual": 2.532284344444445,
+    "published": 2.53228,
+    "passed": true
+  },
+  {
+    "metric": "sd",
+    "actual": 0.6937559038725327,
+    "published": 0.69376,
+    "passed": true
+  },
+  {
+    "metric": "median",
+    "actual": 2.4533370000000003,
+    "published": 2.45334,
+    "passed": true
+  },
+  {
+    "metric": "minimum",
+    "actual": 0.746546,
+    "published": 0.74655,
+    "passed": true
+  },
+  {
+    "metric": "maximum",
+    "actual": 5.168668,
+    "published": 5.16867,
+    "passed": true
+  },
+  {
+    "metric": "Cassette df",
+    "actual": 29,
+    "published": 29,
+    "passed": true
+  },
+  {
+    "metric": "Cassette ss",
+    "actual": 127.40293170887917,
+    "published": 127.40293,
+    "passed": true
+  },
+  {
+    "metric": "Cassette variance_component",
+    "actual": 0.2645237580054928,
+    "published": 0.2645,
+    "passed": true
+  },
+  {
+    "metric": "Wafer within cassette df",
+    "actual": 60,
+    "published": 60,
+    "passed": true
+  },
+  {
+    "metric": "Wafer within cassette ss",
+    "actual": 25.520890296185758,
+    "published": 25.52089,
+    "passed": true
+  },
+  {
+    "metric": "Wafer within cassette variance_component",
+    "actual": 0.0499703870362443,
+    "published": 0.05,
+    "passed": true
+  },
+  {
+    "metric": "Site within wafer df",
+    "actual": 360,
+    "published": 360,
+    "passed": true
+  },
+  {
+    "metric": "Site within wafer ss",
+    "actual": 63.178645111874815,
+    "published": 63.17865,
+    "passed": true
+  },
+  {
+    "metric": "Site within wafer variance_component",
+    "actual": 0.17549623642187448,
+    "published": 0.1755,
+    "passed": true
+  }
+]

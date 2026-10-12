@@ -1,0 +1,94 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "name": "Ranking",
+  "position": {
+    "x": 20,
+    "y": 20,
+    "z": 0,
+    "height": 850,
+    "width": 1380,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SECOM"
+                    }
+                  },
+                  "Property": "feature_no"
+                }
+              },
+              "queryRef": "SECOM.feature_no",
+              "nativeQueryRef": "feature_no"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SECOM"
+                    }
+                  },
+                  "Property": "n_before"
+                }
+              },
+              "queryRef": "SECOM.n_before",
+              "nativeQueryRef": "n_before"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SECOM"
+                    }
+                  },
+                  "Property": "n_other"
+                }
+              },
+              "queryRef": "SECOM.n_other",
+              "nativeQueryRef": "n_other"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SECOM"
+                    }
+                  },
+                  "Property": "effect_size"
+                }
+              },
+              "queryRef": "SECOM.effect_size",
+              "nativeQueryRef": "effect_size"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SECOM"
+                    }
+                  },
+                  "Property": "status"
+                }
+              },
+              "queryRef": "SECOM.status",
+              "nativeQueryRef": "status"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

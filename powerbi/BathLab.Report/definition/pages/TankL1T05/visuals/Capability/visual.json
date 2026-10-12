@@ -1,0 +1,122 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "name": "Capability",
+  "position": {
+    "x": 940,
+    "y": 20,
+    "z": 0,
+    "height": 480,
+    "width": 480,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Capability"
+                    }
+                  },
+                  "Property": "parameter_code"
+                }
+              },
+              "queryRef": "Capability.parameter_code",
+              "nativeQueryRef": "parameter_code"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Capability"
+                    }
+                  },
+                  "Property": "month"
+                }
+              },
+              "queryRef": "Capability.month",
+              "nativeQueryRef": "month"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Capability"
+                    }
+                  },
+                  "Property": "n"
+                }
+              },
+              "queryRef": "Capability.n",
+              "nativeQueryRef": "n"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Capability"
+                    }
+                  },
+                  "Property": "cpk"
+                }
+              },
+              "queryRef": "Capability.cpk",
+              "nativeQueryRef": "cpk"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Capability"
+                    }
+                  },
+                  "Property": "ppk"
+                }
+              },
+              "queryRef": "Capability.ppk",
+              "nativeQueryRef": "ppk"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Capability"
+                    }
+                  },
+                  "Property": "small_sample"
+                }
+              },
+              "queryRef": "Capability.small_sample",
+              "nativeQueryRef": "small_sample"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Capability"
+                    }
+                  },
+                  "Property": "interpretation"
+                }
+              },
+              "queryRef": "Capability.interpretation",
+              "nativeQueryRef": "interpretation"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

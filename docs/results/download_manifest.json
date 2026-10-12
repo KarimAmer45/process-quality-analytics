@@ -1,0 +1,35 @@
+{
+  "recorded_at": "2026-10-12T14:07:09.033969+00:00",
+  "files": [
+    {
+      "path": "data/raw/nist/LITHOGRA.DAT",
+      "url": "https://www.itl.nist.gov/div898/handbook/datasets/LITHOGRA.DAT",
+      "bytes": 25353,
+      "sha256": "777cd68453b8ff18b89d02f312259cdfdbd7980215b75687b156d248d7d0f1fc"
+    },
+    {
+      "path": "data/raw/secom/secom.zip",
+      "url": "https://archive.ics.uci.edu/static/public/179/secom.zip",
+      "bytes": 1964989,
+      "sha256": "eea568baf3c2229096d7d294cf0b096b5502bd96d92c0b80a65b84714059be8e"
+    },
+    {
+      "path": "data/raw/secom/secom.data",
+      "from_archive": "secom.zip",
+      "bytes": 5389983,
+      "sha256": "20f0e7ee434f7dcbae0eea9ffff009a2b57f42d6b0dc9a5bd4f00782c0a3374c"
+    },
+    {
+      "path": "data/raw/secom/secom_labels.data",
+      "from_archive": "secom.zip",
+      "bytes": 40638,
+      "sha256": "126884cf453705c9e61a903fe906f0665a3b45ce3639e621edc5c93c89627e03"
+    },
+    {
+      "path": "data/raw/secom/secom.names",
+      "from_archive": "secom.zip",
+      "bytes": 4223,
+      "sha256": "6d91b0b46cdee03064ee3e3112f937c1b3f7fcd9933575794ec07974e6f1ea59"
+    }
+  ]
+}

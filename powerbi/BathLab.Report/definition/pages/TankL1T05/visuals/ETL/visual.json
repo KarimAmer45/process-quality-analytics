@@ -1,0 +1,94 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "name": "ETL",
+  "position": {
+    "x": 940,
+    "y": 520,
+    "z": 0,
+    "height": 360,
+    "width": 480,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ETL"
+                    }
+                  },
+                  "Property": "file_name"
+                }
+              },
+              "queryRef": "ETL.file_name",
+              "nativeQueryRef": "file_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ETL"
+                    }
+                  },
+                  "Property": "sheet_name"
+                }
+              },
+              "queryRef": "ETL.sheet_name",
+              "nativeQueryRef": "sheet_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ETL"
+                    }
+                  },
+                  "Property": "status"
+                }
+              },
+              "queryRef": "ETL.status",
+              "nativeQueryRef": "status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ETL"
+                    }
+                  },
+                  "Property": "reason"
+                }
+              },
+              "queryRef": "ETL.reason",
+              "nativeQueryRef": "reason"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ETL"
+                    }
+                  },
+                  "Property": "rows"
+                }
+              },
+              "queryRef": "ETL.rows",
+              "nativeQueryRef": "rows"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "validated_files": [
+    "powerbi\\BathLab.pbip",
+    "powerbi\\BathLab.Report\\definition.pbir",
+    "powerbi\\BathLab.SemanticModel\\definition.pbism",
+    "powerbi\\BathLab.Report\\definition\\report.json",
+    "powerbi\\BathLab.Report\\definition\\version.json",
+    "powerbi\\BathLab.Report\\definition\\pages\\pages.json",
+    "powerbi\\BathLab.Report\\definition\\pages\\NIST\\page.json",
+    "powerbi\\BathLab.Report\\definition\\pages\\SECOM\\page.json",
+    "powerbi\\BathLab.Report\\definition\\pages\\TankL1T05\\page.json",
+    "powerbi\\BathLab.Report\\definition\\pages\\NIST\\visuals\\ANOVA\\visual.json",
+    "powerbi\\BathLab.Report\\definition\\pages\\NIST\\visuals\\Summary\\visual.json",
+    "powerbi\\BathLab.Report\\definition\\pages\\SECOM\\visuals\\Ranking\\visual.json",
+    "powerbi\\BathLab.Report\\definition\\pages\\TankL1T05\\visuals\\Capability\\visual.json",
+    "powerbi\\BathLab.Report\\definition\\pages\\TankL1T05\\visuals\\Dosing\\visual.json",
+    "powerbi\\BathLab.Report\\definition\\pages\\TankL1T05\\visuals\\ETL\\visual.json",
+    "powerbi\\BathLab.Report\\definition\\pages\\TankL1T05\\visuals\\MovingRange\\visual.json",
+    "powerbi\\BathLab.Report\\definition\\pages\\TankL1T05\\visuals\\Nickel\\visual.json"
+  ],
+  "errors": [],
+  "desktop_refresh_verified": false,
+  "limitation": "JSON schemas validate PBIP/PBIR structure, not semantic-model engine compatibility or rendered visuals."
+}

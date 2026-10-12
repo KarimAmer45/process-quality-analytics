@@ -1,0 +1,565 @@
+{
+  "name": "BathLab",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "Server",
+        "kind": "m",
+        "expression": "\"127.0.0.1:55433\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      },
+      {
+        "name": "Database",
+        "kind": "m",
+        "expression": "\"bath_lab_spc\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "tables": [
+      {
+        "name": "Nickel",
+        "columns": [
+          {
+            "name": "tank_code",
+            "dataType": "string",
+            "sourceColumn": "tank_code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sampled_local",
+            "dataType": "dateTime",
+            "sourceColumn": "sampled_local",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "value",
+            "dataType": "double",
+            "sourceColumn": "value",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mr",
+            "dataType": "double",
+            "sourceColumn": "mr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cl",
+            "dataType": "double",
+            "sourceColumn": "cl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ucl",
+            "dataType": "double",
+            "sourceColumn": "ucl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "lcl",
+            "dataType": "double",
+            "sourceColumn": "lcl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mr_ucl",
+            "dataType": "double",
+            "sourceColumn": "mr_ucl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "beyond_limits",
+            "dataType": "boolean",
+            "sourceColumn": "beyond_limits",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "rule4_signal",
+            "dataType": "boolean",
+            "sourceColumn": "rule4_signal",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "spc_status",
+            "dataType": "string",
+            "sourceColumn": "spc_status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "signal_value",
+            "dataType": "double",
+            "sourceColumn": "signal_value",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Nickel",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = PostgreSQL.Database(Server, Database, [CreateNavigationProperties=false]),",
+                "    Data = Source{[Schema=\"lab\",Item=\"v_bi_nickel\"]}[Data]",
+                "in",
+                "    Data"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Capability",
+        "columns": [
+          {
+            "name": "tank_code",
+            "dataType": "string",
+            "sourceColumn": "tank_code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "parameter_code",
+            "dataType": "string",
+            "sourceColumn": "parameter_code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month",
+            "dataType": "dateTime",
+            "sourceColumn": "month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "n",
+            "dataType": "int64",
+            "sourceColumn": "n",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mean",
+            "dataType": "double",
+            "sourceColumn": "mean",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sigma_within",
+            "dataType": "double",
+            "sourceColumn": "sigma_within",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "lsl",
+            "dataType": "double",
+            "sourceColumn": "lsl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "usl",
+            "dataType": "double",
+            "sourceColumn": "usl",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cpk",
+            "dataType": "double",
+            "sourceColumn": "cpk",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "interpretation",
+            "dataType": "string",
+            "sourceColumn": "interpretation",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sigma_overall",
+            "dataType": "double",
+            "sourceColumn": "sigma_overall",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ppk",
+            "dataType": "double",
+            "sourceColumn": "ppk",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "small_sample",
+            "dataType": "boolean",
+            "sourceColumn": "small_sample",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "i_chart_breaches",
+            "dataType": "int64",
+            "sourceColumn": "i_chart_breaches",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "rule4_points",
+            "dataType": "int64",
+            "sourceColumn": "rule4_points",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mr_excursions",
+            "dataType": "int64",
+            "sourceColumn": "mr_excursions",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Capability",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = PostgreSQL.Database(Server, Database, [CreateNavigationProperties=false]),",
+                "    Data = Source{[Schema=\"lab\",Item=\"v_bi_capability\"]}[Data]",
+                "in",
+                "    Data"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "ETL",
+        "columns": [
+          {
+            "name": "file_name",
+            "dataType": "string",
+            "sourceColumn": "file_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "import_hash",
+            "dataType": "string",
+            "sourceColumn": "import_hash",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sheet_name",
+            "dataType": "string",
+            "sourceColumn": "sheet_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "reason",
+            "dataType": "string",
+            "sourceColumn": "reason",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "rows",
+            "dataType": "int64",
+            "sourceColumn": "rows",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "ETL",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = PostgreSQL.Database(Server, Database, [CreateNavigationProperties=false]),",
+                "    Data = Source{[Schema=\"lab\",Item=\"v_etl_latest\"]}[Data]",
+                "in",
+                "    Data"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dosing",
+        "columns": [
+          {
+            "name": "tank_id",
+            "dataType": "int64",
+            "sourceColumn": "tank_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "day",
+            "dataType": "dateTime",
+            "sourceColumn": "day",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "additive",
+            "dataType": "string",
+            "sourceColumn": "additive",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ml",
+            "dataType": "double",
+            "sourceColumn": "ml",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tank_code",
+            "dataType": "string",
+            "sourceColumn": "tank_code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "amp_hours",
+            "dataType": "double",
+            "sourceColumn": "amp_hours",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "charge_origin",
+            "dataType": "string",
+            "sourceColumn": "charge_origin",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ml_per_kah",
+            "dataType": "double",
+            "sourceColumn": "ml_per_kah",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "min_ml_per_kah",
+            "dataType": "double",
+            "sourceColumn": "min_ml_per_kah",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "max_ml_per_kah",
+            "dataType": "double",
+            "sourceColumn": "max_ml_per_kah",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "source",
+            "dataType": "string",
+            "sourceColumn": "source",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dosing",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = PostgreSQL.Database(Server, Database, [CreateNavigationProperties=false]),",
+                "    Data = Source{[Schema=\"lab\",Item=\"v_dosing_per_charge\"]}[Data]",
+                "in",
+                "    Data"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "NISTSummary",
+        "columns": [
+          {
+            "name": "n",
+            "dataType": "int64",
+            "sourceColumn": "n",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mean",
+            "dataType": "double",
+            "sourceColumn": "mean",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sd",
+            "dataType": "double",
+            "sourceColumn": "sd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "median",
+            "dataType": "double",
+            "sourceColumn": "median",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "minimum",
+            "dataType": "double",
+            "sourceColumn": "minimum",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "maximum",
+            "dataType": "double",
+            "sourceColumn": "maximum",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "NISTSummary",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = PostgreSQL.Database(Server, Database, [CreateNavigationProperties=false]),",
+                "    Data = Source{[Schema=\"realdata\",Item=\"v_nist_summary\"]}[Data]",
+                "in",
+                "    Data"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "NISTAnova",
+        "columns": [
+          {
+            "name": "component",
+            "dataType": "string",
+            "sourceColumn": "component",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "df",
+            "dataType": "int64",
+            "sourceColumn": "df",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ss",
+            "dataType": "double",
+            "sourceColumn": "ss",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ms",
+            "dataType": "double",
+            "sourceColumn": "ms",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "variance_component",
+            "dataType": "double",
+            "sourceColumn": "variance_component",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "NISTAnova",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = PostgreSQL.Database(Server, Database, [CreateNavigationProperties=false]),",
+                "    Data = Source{[Schema=\"realdata\",Item=\"v_nist_anova\"]}[Data]",
+                "in",
+                "    Data"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "SECOM",
+        "columns": [
+          {
+            "name": "feature_no",
+            "dataType": "int64",
+            "sourceColumn": "feature_no",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "n_before",
+            "dataType": "int64",
+            "sourceColumn": "n_before",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "n_other",
+            "dataType": "int64",
+            "sourceColumn": "n_other",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mean_before",
+            "dataType": "double",
+            "sourceColumn": "mean_before",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mean_other",
+            "dataType": "double",
+            "sourceColumn": "mean_other",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "pooled_sd",
+            "dataType": "double",
+            "sourceColumn": "pooled_sd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "effect_size",
+            "dataType": "double",
+            "sourceColumn": "effect_size",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SECOM",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = PostgreSQL.Database(Server, Database, [CreateNavigationProperties=false]),",
+                "    Data = Source{[Schema=\"realdata\",Item=\"v_secom_ranking\"]}[Data]",
+                "in",
+                "    Data"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Nickel\", \"Capability\", \"ETL\", \"Dosing\", \"NISTSummary\", \"NISTAnova\", \"SECOM\"]"
+      }
+    ]
+  }
+}

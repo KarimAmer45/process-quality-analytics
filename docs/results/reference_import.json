@@ -1,0 +1,12 @@
+{
+  "nist_rows": 450,
+  "secom_runs": 1567,
+  "secom_sensors": 590,
+  "secom_failures": 104,
+  "secom_values": 882579,
+  "missing_values": 41951,
+  "missing_pct": 4.537548808583821,
+  "first_test_time": "2008-07-19 11:55:00",
+  "last_test_time": "2008-10-17 06:07:00",
+  "metadata_note": "UCI page says 591 features; the downloaded measurement matrix has 590 sensor columns. Timestamp and outcome remain separate."
+}

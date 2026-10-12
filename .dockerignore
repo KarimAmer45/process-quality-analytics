@@ -1,0 +1,11 @@
+.git
+.env
+.local
+.venv
+node_modules
+data
+backups
+__pycache__
+.pytest_cache
+.pytest-tmp
+docs/previews

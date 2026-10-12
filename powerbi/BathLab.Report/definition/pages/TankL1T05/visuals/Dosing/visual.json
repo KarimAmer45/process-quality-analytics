@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "name": "Dosing",
+  "position": {
+    "x": 20,
+    "y": 710,
+    "z": 0,
+    "height": 170,
+    "width": 900,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dosing"
+                    }
+                  },
+                  "Property": "day"
+                }
+              },
+              "queryRef": "Dosing.day",
+              "nativeQueryRef": "day"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dosing"
+                    }
+                  },
+                  "Property": "additive"
+                }
+              },
+              "queryRef": "Dosing.additive",
+              "nativeQueryRef": "additive"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dosing"
+                    }
+                  },
+                  "Property": "ml_per_kah"
+                }
+              },
+              "queryRef": "Dosing.ml_per_kah",
+              "nativeQueryRef": "ml_per_kah"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dosing"
+                    }
+                  },
+                  "Property": "status"
+                }
+              },
+              "queryRef": "Dosing.status",
+              "nativeQueryRef": "status"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "name": "MovingRange",
+  "position": {
+    "x": 20,
+    "y": 390,
+    "z": 0,
+    "height": 300,
+    "width": 900,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Nickel"
+                    }
+                  },
+                  "Property": "sampled_local"
+                }
+              },
+              "queryRef": "Nickel.sampled_local",
+              "nativeQueryRef": "sampled_local"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Nickel"
+                        }
+                      },
+                      "Property": "mr"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(Nickel.mr)",
+              "nativeQueryRef": "mr"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Nickel"
+                        }
+                      },
+                      "Property": "mr_ucl"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(Nickel.mr_ucl)",
+              "nativeQueryRef": "mr_ucl"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

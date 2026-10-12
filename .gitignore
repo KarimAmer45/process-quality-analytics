@@ -1,0 +1,12 @@
+.env
+.venv/
+.local/
+data/
+backups/
+__pycache__/
+.pytest_cache/
+.pytest-tmp/
+*.pyc
+node_modules/
+powerbi/**/.pbi/
+docs/previews/
