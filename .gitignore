@@ -7,6 +7,6 @@ __pycache__/
 .pytest_cache/
 .pytest-tmp/
 *.pyc
-node_modules/
+node_modules
 powerbi/**/.pbi/
 docs/previews/
